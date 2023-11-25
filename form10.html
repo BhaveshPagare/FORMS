@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 10</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            width: 100%;
+            background-image: url(back-office.png);
+        }
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.8;
+            max-width: 630px;
+            width: 100%;
+            background: rgb(233, 224, 224);
+            border-radius: 30%;
+            filter: drop-shadow(5px 5px 20px black);
+        }
+        
+        .container:hover {
+            box-shadow: none;
+        }
+        
+        .container .registration {
+            display: none;
+        }
+        
+        #check:checked~.registration {
+            display: block;
+        }
+        
+        #check:checked~.login {
+            display: none;
+        }
+        
+        #check {
+            display: none;
+        }
+        
+        .container .form {
+            padding: 2rem;
+        }
+        
+        .form header {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #009579;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form input {
+            height: 60px;
+            width: 90%;
+            padding: 0 15px;
+            font-size: 17px;
+            margin-bottom: 1.3rem;
+            border: 1px solid #ddd;
+            border-radius: 40px;
+            box-shadow: 0 0 20px rgb(0, 0, 0);
+        }
+        
+        .form input:focus {
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form input:hover {
+            box-shadow: 0 0 20px rgb(51, 51, 59);
+            filter: grayscale(5);
+        }
+        
+        .form a,
+        label {
+            font-size: 16px;
+            padding: 0 0 40px 30px;
+            color: #950039;
+            text-decoration: none;
+        }
+        
+        .form a:hover {
+            text-decoration: underline;
+        }
+        
+        .button {
+            font-weight: 900;
+            font-size: 10px;
+            margin: 30px;
+            background-color: #009579;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="login form">
+            <header>Login</header>
+            <form action="#"><img src="user.svg" alt="">
+                <input type="text" placeholder="Enter your email"><br><img src="key.svg" alt="">
+                <input type="password" placeholder="Enter your password">
+                <a href="#">Forgot password?</a>
+                <input type="button" class="button" value="Login">
+            </form>
+            <div class="signup">
+                <span style="margin-left: 30%;" class="signup">Don't have an account?
+         <label for="check">Signup</label>
+        </span>
+            </div>
+        </div>
+        <div class="registration form">
+            <header>Signup</header>
+            <form action="#">
+                <i class="fas fa-user"><img src="user.svg" alt=""></i>
+                <input type="text" placeholder="Enter your email">
+                <i class="fas fa-user"><img src="key.svg" alt=""></i>
+                <input type="password" placeholder="Create a password">
+                <i class="fas fa-user"><img src="key.svg" alt=""></i>
+                <input type="password" placeholder="Confirm your password">
+                <input type="button" class="button" value="Signup">
+            </form>
+            <div class="signup">
+                <span style="margin-left: 30%;" class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

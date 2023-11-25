@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form4</title>
+    <style>
+        * {
+            font-family: cursive;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sign-In {
+            position: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .email {
+            padding: 10px 50px;
+            background: transparent;
+            outline-color: rgb(0, 0, 0);
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        
+        .password {
+            padding: 10px 50px;
+            background: transparent;
+            outline-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        
+        a {
+            text-decoration: none;
+            margin-left: 60px;
+        }
+        
+        .login {
+            padding: 5px 125px;
+            font-size: larger;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(12, 124, 168);
+            font-weight: 600;
+            mix-blend-mode: screen;
+        }
+        
+        img {
+            margin: 0px 0px 0px 0px;
+            width: 20px;
+        }
+        
+        .new-account {
+            margin-left: 45px;
+        }
+        
+        @media (min-width:576px) {
+            .popup {
+                max-width: 540px;
+            }
+        }
+        
+        @media (min-width:786px) {
+            .popup {
+                max-width: 720px;
+            }
+        }
+        
+        .popup {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%)scale(0.6);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+            visibility: hidden;
+            transition: transform 0.8s, top 0.8s;
+        }
+        
+        #field {
+            background: linear-gradient(red, orange, rgb(212, 255, 0));
+            border-radius: 20px 100px 20px 100px;
+        }
+        
+        .popup a {
+            cursor: pointer;
+        }
+        
+        .open-popup {
+            top: 10%;
+            visibility: visible;
+            transform: translate(-50%, -50%)scale(0.9);
+        }
+        
+        .closePopup {
+            margin-left: 275px;
+            padding-right: 10px;
+        }
+        
+        #open {
+            background-color: black;
+            border: 2px solid red;
+            border-radius: 10px;
+            font-size: 18px;
+            margin: 20vh 0vh 0px 150vh;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            padding: 10px 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="open" onclick="openPopup()">Login</button>
+    <div class="popup" id="popup">
+        <div class="sign-In">
+            <form action="#">
+
+                <fieldset id="field">
+                    <button style="margin-left: 45vh; background: transparent; border: none; " onclick="closePopup()" class="closePopup"><h3><b>X</b></h3></button>
+
+                    <h2>Welcome Back !</h2>
+
+                    <p>
+                        <h4>Just be with us , we can learn All</h4>
+                    </p>
+                    <hr>
+                    <b>  Email or Password</b> <br>
+                    <input class="email" type="email" name="" id="" required placeholder="username /email "><br> <br>
+                    <b>Password</b> <br>
+                    <input class="password" type="password" name="" id="" required placeholder="Password"><br>
+                    <br>
+                    <input type="checkbox" name="" id=""> <small>Remember me</small>
+                    <small><b><a href="">Forget Password</a></b></small>
+                    <br><br>
+                    <button class="login">Login</button>
+                    <br><br>
+                    <div>
+                        _____________<sub> Or Login With </sub>______________
+                    </div>
+                    <br>
+
+                    <div style="border: 2px solid;">
+                        <img src="search.png" alt="">
+                        <a href="">
+                            <label style="font-size: larger; font-weight: 700;" for="">Google</label> </a>
+                    </div><br>
+                    <div style="border: 2px solid;">
+                        <img class="imf-fluid" style="margin-left: 22px;" src="facebook.png" alt="">
+                        <a href="">
+                            <label style="font-size: larger; font-weight: 700;" for="">Facebook</label>
+                        </a>
+                    </div>
+                    <br>
+                    <small class="new-account"> don't have an account ?</small><a class="sign-up" href="">Sign-Up Now</a>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+
+</html>

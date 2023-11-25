@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sign-In {
+            position: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .email {
+            padding: 10px 50px;
+            background: transparent;
+            outline-color: rgb(0, 0, 0);
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        
+        .password {
+            padding: 10px 50px;
+            background: transparent;
+            outline-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        
+        a {
+            text-decoration: none;
+            margin-left: 60px;
+        }
+        
+        .login {
+            padding: 5px 125px;
+            font-size: larger;
+            border-radius: 5px;
+            border: none;
+            background-color: skyblue;
+            font-weight: 600;
+            mix-blend-mode: screen;
+        }
+        
+        img {
+            margin: 0px 0px 0px 0px;
+            width: 20px;
+        }
+        
+        .new-account {
+            margin-left: 45px;
+        }
+        
+        @media (min-width:576px) {
+            .popup {
+                max-width: 540px;
+            }
+        }
+        
+        @media (min-width:786px) {
+            .popup {
+                max-width: 720px;
+            }
+        }
+        
+        .popup {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%)scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+            visibility: hidden;
+            transition: transform 0.8s, top 0.8s;
+            -webkit-transition: transform 0.8s, top 0.8s;
+            -moz-transition: transform 0.8s, top 0.8s;
+            -ms-transition: transform 0.8s, top 0.8s;
+            -o-transition: transform 0.8s, top 0.8s;
+            -webkit-transform: translate(-50%, -50%)scale(0.1);
+            -moz-transform: translate(-50%, -50%)scale(0.1);
+            -ms-transform: translate(-50%, -50%)scale(0.1);
+            -o-transform: translate(-50%, -50%)scale(0.1);
+        }
+        
+        .popup a {
+            cursor: pointer;
+        }
+        
+        .open-popup {
+            top: 20%;
+            visibility: visible;
+            transform: translate(-50%, -50%)scale(1);
+        }
+        
+        .closePopup {
+            margin-left: 275px;
+            padding-right: 10px;
+        }
+        
+        #open {
+            background-color: black;
+            border: 2px solid red;
+            border-radius: 10px;
+            font-size: 18px;
+            margin: 20vh 0vh 0px 150vh;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            padding: 10px 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="open" onclick="openPopup()">Login</button>
+    <div class="popup" id="popup">
+        <div class="sign-In">
+            <form action="#">
+
+                <fieldset id="field">
+                    <button style="margin-left: 45vh; background: transparent; border: none; " onclick="closePopup()" class="closePopup"><h3><b>X</b></h3></button>
+                    <p>
+                        <h2>Welcome Back !</h2>
+                    </p>
+                    <p>
+                        <h4>Just be with us , we can learn All</h4>
+                    </p>
+                    <b>  Email </b> <br>
+                    <input class="email" type="email" name="" id="" required><br> <br>
+                    <b>Password</b> <br>
+                    <input class="password" type="password" name="" id="" required><br>
+                    <br>
+                    <input type="checkbox" name="" id=""> <small>Remember me</small>
+                    <small><b><a href="">Forget Password</a></b></small>
+                    <br><br>
+                    <button class="login">Login</button>
+                    <br><br>
+                    <div>
+                        _____________<sub> Or Login With </sub>______________
+                    </div>
+                    <br><br>
+
+                    <a href="https://www.google.co.in/"> <img src="search.png" alt=""></a>
+                    <a href=""><img src="twitter.png" alt=""></a>
+                    <a href=""><img src="facebook.png" alt=""></a>
+
+                    <br><br><br>
+                    <small class="new-account"> don't have an account ?</small><a class="sign-up" href="">Sign-Up</a>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        
+        .popup {
+            display: flex;
+            flex: auto;
+        }
+        
+        #field {
+            background-image: linear-gradient(#da6ecf, #ac638c);
+            border: 4px solid rgb(0, 0, 0);
+            border-radius: 30px;
+            width: auto;
+            height: auto;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+        }
+        
+        #name {
+            background-color: whitesmoke;
+            padding: 10px 10px;
+        }
+        
+        .phone {
+            margin-left: 40%;
+        }
+        
+        .birthday {
+            margin-left: 17%;
+        }
+        
+        #address {
+            resize: none;
+        }
+        
+        #country {
+            padding: 10px 53px;
+            margin-left: 0px;
+        }
+        
+        #state {
+            padding: 10px 30px;
+            margin-left: 0px;
+        }
+        
+        .register {
+            font-weight: 900;
+            background-image: url(shiv.jpg);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .registration {
+            padding: 5px 125px;
+            margin-left: 05%;
+            font-size: larger;
+            border-radius: 5px;
+            border: none;
+            background-color: red;
+            font-weight: 600;
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="popup" id="popup">
+        <div class="sign-In">
+            <form action="#">
+
+                <fieldset id="field">
+                    <h2 style="margin-left: 30%;" class="register"> Registration Form </h2>
+                    <h4>Register Your-self and learn something new !!!</h4>
+                    <hr>
+
+                    <label for=""><b>Name</b></label>
+                    <br>
+                    <input type="text" name="" id="name" placeholder="First Name" required>
+                    <input type="text" name="" id="name" placeholder="last Name" required> <br><br><br>
+                    <label for=""><b>Email</b></label>
+                    <label for="" class="phone"><b>Phone</b></label><br>
+                    <input type="email" name="" id="name" placeholder="@gmail.com">
+                    <input type="phone" name="" id="name" placeholder="xxxxxxxxxx" required><br><br>
+                    <label for=""><b>Address</b></label><br>
+                    <textarea name="" id="address" cols="46" rows="3"></textarea><br><br>
+                    <label for=""><b>Upload your Identity Card</b></label>
+                    <label for="" class="birthday"><b>Birthdate</b></label><br>
+                    <input type="file" name="name" id="" required>
+                    <input type="date" name="" id="" required>
+                    <br><br>
+                    <input type="text" name="" id="name" placeholder="City" required>
+                    <select name="" id="country">
+                        <option value="state">Country</option>
+                        <option value="ame">America</option>
+                        <option value="bharat">Bharat</option>
+                        <option value="cha">China</option>
+                        <option value="japan">Japan</option>
+                        <option value="eng">England</option>
+                    </select>
+                    <br><br>
+                    <input type="text" name="" id="name" placeholder="Zip code/postal">
+                    <select name="" id="state">
+                        <option value="state">State</option>
+                        <option value="maha">Maharashtra</option>
+                        <option value="madhya">Madhyapradesh</option>
+                        <option value="uttara">Uttarakhand</option>
+                        <option value="rajas">Rajasthan</option>
+                        <option value="guj">Gujrat</option>
+                    </select>
+                    <br><br>
+                    <button class="registration">Register</button><br><br>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+
+</html>
